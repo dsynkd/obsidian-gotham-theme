@@ -281,14 +281,18 @@ body {
 }
 
 /* Editor: active line — class-toggle id must match Style Settings (default: on) */
-.theme-dark .cm-line.cm-active {
-  background-color: transparent !important;
-  
+body.theme-dark:not(.gotham-active-line-highlight)
+  .markdown-source-view.mod-cm6
+  .cm-editor
+  .cm-line.cm-active {
+  background-color: transparent;
 }
 
-/* When Style Settings is enabled and the toggle is off, hide highlight (see initClasses in Style Settings) */
-body.theme-dark.gotham-active-line-highlight .cm-line.cm-active {
-  background-color: rgba(38, 41, 44, 0.65) !important;
+body.theme-dark.gotham-active-line-highlight
+  .markdown-source-view.mod-cm6
+  .cm-editor
+  .cm-line.cm-active {
+  background-color: rgba(38, 41, 44, 0.65);
 }
 
 .theme-dark .markdown-rendered mark,
@@ -297,12 +301,13 @@ body.theme-dark.gotham-active-line-highlight .cm-line.cm-active {
   color: var(--text-highlight-fg);
 }
 
-.theme-dark .markdown-rendered mark a {
-  color: var(--gotham-cyan) !important;
+.theme-dark .markdown-preview-view .markdown-rendered mark a {
+  color: var(--gotham-cyan);
 }
 
-.theme-dark .search-result-file-matched-text {
-  color: var(--text-highlight-fg) !important;
+.theme-dark .workspace-leaf-content .search-result-file-matched-text,
+.theme-dark .markdown-rendered .search-result-file-matched-text {
+  color: var(--text-highlight-fg);
 }
 
 .theme-dark .suggestion-highlight {
@@ -314,46 +319,46 @@ body.theme-dark.gotham-active-line-highlight .cm-line.cm-active {
   font-weight: 600;
 }
 
-.theme-dark .nav-file-tag {
-  color: var(--nav-file-tag) !important;
+.theme-dark .workspace-leaf-content .nav-file-title .nav-file-tag {
+  color: var(--nav-file-tag);
 }
 
-.theme-dark .is-flashing {
-  background-color: var(--flashing-background) !important;
+body.theme-dark .workspace .is-flashing {
+  background-color: var(--flashing-background);
 }
 
 /* Tables */
-table {
-  border: 1px solid var(--background-secondary) !important;
+.markdown-preview-view .markdown-rendered table {
+  border: 1px solid var(--background-secondary);
   border-collapse: collapse;
 }
 
-thead {
-  border-bottom: 2px solid var(--background-modifier-border) !important;
+.markdown-preview-view .markdown-rendered thead {
+  border-bottom: 2px solid var(--background-modifier-border);
 }
 
-th {
-  font-weight: 600 !important;
-  border: 1px solid var(--background-secondary) !important;
+.markdown-preview-view .markdown-rendered th {
+  font-weight: 600;
+  border: 1px solid var(--background-secondary);
 }
 
-td {
-  border-left: 1px solid var(--background-secondary) !important;
-  border-right: 1px solid var(--background-secondary) !important;
-  border-bottom: 1px solid var(--background-secondary) !important;
+.markdown-preview-view .markdown-rendered td {
+  border-left: 1px solid var(--background-secondary);
+  border-right: 1px solid var(--background-secondary);
+  border-bottom: 1px solid var(--background-secondary);
 }
 
-.markdown-rendered tbody tr:nth-child(even) {
-  background-color: var(--table-row-even-background) !important;
+.markdown-preview-view .markdown-rendered tbody tr:nth-child(even) {
+  background-color: var(--table-row-even-background);
 }
 
-.markdown-rendered tbody tr:nth-child(odd) {
-  background-color: var(--table-row-odd-background) !important;
+.markdown-preview-view .markdown-rendered tbody tr:nth-child(odd) {
+  background-color: var(--table-row-odd-background);
 }
 
-.markdown-rendered tbody tr:nth-child(even):hover,
-.markdown-rendered tbody tr:nth-child(odd):hover {
-  background-color: var(--table-row-background-hover) !important;
+.markdown-preview-view .markdown-rendered tbody tr:nth-child(even):hover,
+.markdown-preview-view .markdown-rendered tbody tr:nth-child(odd):hover {
+  background-color: var(--table-row-background-hover);
 }
 
 /* Inline code (editor) */
@@ -381,84 +386,88 @@ td {
   padding: 0.1em 0.25em 0.1em 0;
 }
 
-.theme-dark .cm-line .cm-strong {
-  color: var(--bold-color) !important;
+.theme-dark .markdown-source-view.mod-cm6 .cm-content .cm-line .cm-strong {
+  color: var(--bold-color);
 }
 
-.theme-dark .cm-line .cm-em {
-  color: var(--italic-color) !important;
+.theme-dark .markdown-source-view.mod-cm6 .cm-content .cm-line .cm-em {
+  color: var(--italic-color);
 }
 
-.theme-dark .cm-url {
-  color: var(--link-external-color) !important;
+.theme-dark .markdown-source-view.mod-cm6 .cm-content .cm-line .cm-url {
+  color: var(--link-external-color);
 }
 
-.theme-dark .cm-url:hover {
-  color: var(--text-accent-hover) !important;
+.theme-dark .markdown-source-view.mod-cm6 .cm-content .cm-line .cm-url:hover {
+  color: var(--text-accent-hover);
 }
 
 /* Mermaid */
-.theme-dark .mermaid .note {
-  fill: var(--mermaid-note) !important;
+.theme-dark .markdown-preview-view .mermaid .note {
+  fill: var(--mermaid-note);
 }
 
-.theme-dark .mermaid .loopLine {
-  stroke: var(--mermaid-loopline) !important;
+.theme-dark .markdown-preview-view .mermaid .loopLine {
+  stroke: var(--mermaid-loopline);
 }
 
-.theme-dark .mermaid .loopText > tspan,
-.theme-dark .mermaid .entityLabel {
-  fill: var(--gotham-orange) !important;
+.theme-dark .markdown-preview-view .mermaid .loopText > tspan,
+.theme-dark .markdown-preview-view .mermaid .entityLabel {
+  fill: var(--gotham-orange);
 }
 
-.theme-dark .mermaid .exclude-range {
-  fill: var(--mermaid-exclude) !important;
+.theme-dark .markdown-preview-view .mermaid .exclude-range {
+  fill: var(--mermaid-exclude);
 }
 
-.theme-dark .mermaid .sequenceNumber {
-  fill: var(--mermaid-seqnum) !important;
+.theme-dark .markdown-preview-view .mermaid .sequenceNumber {
+  fill: var(--mermaid-seqnum);
 }
 
 /* Calendar */
-.theme-dark .calendar .week-num {
-  color: var(--calendar-week) !important;
+.theme-dark .workspace-leaf-content .calendar .week-num {
+  color: var(--calendar-week);
 }
 
-.theme-dark .calendar .today {
-  color: var(--calendar-today) !important;
+.theme-dark .workspace-leaf-content .calendar .today {
+  color: var(--calendar-today);
 }
 
-.theme-dark .calendar .week-num:hover,
-.theme-dark .calendar .day:hover {
-  color: var(--calendar-hover) !important;
-  background-color: var(--calendar-background-hover) !important;
+.theme-dark .workspace-leaf-content .calendar .week-num:hover,
+.theme-dark .workspace-leaf-content .calendar .day:hover {
+  color: var(--calendar-hover);
+  background-color: var(--calendar-background-hover);
 }
 
 /* Dataview */
-.theme-dark .dataview.inline-field-key {
+.theme-dark .markdown-preview-view span.dataview.inline-field-key,
+.theme-dark .markdown-source-view .markdown-rendered span.dataview.inline-field-key {
   border-top-left-radius: var(--radius-s);
   border-bottom-left-radius: var(--radius-s);
   padding-left: 4px;
   font-family: var(--font-monospace);
   font-size: var(--font-smaller);
-  color: var(--dataview-key) !important;
-  background-color: var(--dataview-key-background) !important;
+  color: var(--dataview-key);
+  background-color: var(--dataview-key-background);
 }
 
-.theme-dark .dataview.inline-field-value {
+.theme-dark .markdown-preview-view span.dataview.inline-field-value,
+.theme-dark .markdown-source-view .markdown-rendered span.dataview.inline-field-value {
   border-top-right-radius: var(--radius-s);
   border-bottom-right-radius: var(--radius-s);
   padding-right: 4px;
   font-family: var(--font-monospace);
   font-size: var(--font-smaller);
-  color: var(--dataview-value) !important;
-  background-color: var(--dataview-value-background) !important;
+  color: var(--dataview-value);
+  background-color: var(--dataview-value-background);
 }
 
 /* Prism / code blocks */
-.theme-dark code[class*="language-"],
-.theme-dark pre[class*="language-"] {
-  line-height: var(--line-height-tight) !important;
+.theme-dark .markdown-preview-view code[class*="language-"],
+.theme-dark .markdown-preview-view pre[class*="language-"],
+.theme-dark .markdown-source-view.mod-cm6 code[class*="language-"],
+.theme-dark .markdown-source-view.mod-cm6 pre[class*="language-"] {
+  line-height: var(--line-height-tight);
 }
 
 .theme-dark .markdown-preview-section pre {
