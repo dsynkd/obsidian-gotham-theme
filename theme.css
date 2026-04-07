@@ -217,6 +217,17 @@ body {
 
   --modal-border-color: var(--gotham-border);
   --modal-background: var(--gotham-panel);
+
+  --background-modifier-form-field: var(--gotham-input);
+  --background-modifier-form-field-highlighted: rgba(var(--gotham-teal_x), 0.14);
+  --background-modifier-border-focus: var(--gotham-teal);
+  --input-unfocused-border-color: var(--gotham-border);
+  --input-hover-border-color: var(--gotham-cyan);
+  --input-focus-border-color: var(--gotham-teal);
+
+  --metadata-input-background: transparent;
+  --metadata-input-background-hover: rgba(var(--gotham-panel_x), 0.75);
+  --metadata-input-background-active: rgba(var(--gotham-teal_x), 0.16);
 }
 
 .theme-light {
@@ -278,6 +289,17 @@ body {
   --interactive-accent-rgb: 37, 111, 130;
 
   --titlebar-text-color-focused: #256f82;
+
+  --background-modifier-form-field: #f4fbfa;
+  --background-modifier-form-field-highlighted: rgba(37, 111, 130, 0.1);
+  --background-modifier-border-focus: #256f82;
+  --input-unfocused-border-color: var(--background-modifier-border);
+  --input-hover-border-color: #33859d;
+  --input-focus-border-color: #256f82;
+
+  --metadata-input-background: #f4fbfa;
+  --metadata-input-background-hover: #e6f2f0;
+  --metadata-input-background-active: rgba(37, 111, 130, 0.12);
 }
 
 /* Editor: active line — class-toggle id must match Style Settings (default: on) */
@@ -472,6 +494,47 @@ body.theme-dark .workspace .is-flashing {
 
 .theme-dark .markdown-preview-section pre {
   border: 1px solid var(--gotham-border);
+}
+
+/* Text fields: focus ring (teal + soft cyan glow) */
+.theme-dark input.text-input:focus,
+.theme-dark input:not([type]):focus,
+.theme-dark input[type="text"]:focus,
+.theme-dark input[type="search"]:focus,
+.theme-dark input[type="email"]:focus,
+.theme-dark input[type="password"]:focus,
+.theme-dark input[type="number"]:focus,
+.theme-dark input[type="url"]:focus,
+.theme-dark input[type="tel"]:focus,
+.theme-dark input[type="date"]:focus,
+.theme-dark input[type="time"]:focus,
+.theme-dark input[type="datetime-local"]:focus,
+.theme-dark textarea:focus,
+.theme-dark select:focus {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(var(--gotham-teal_x), 0.55),
+    0 0 10px rgba(var(--gotham-cyan_x), 0.22);
+}
+
+.theme-light input.text-input:focus,
+.theme-light input:not([type]):focus,
+.theme-light input[type="text"]:focus,
+.theme-light input[type="search"]:focus,
+.theme-light input[type="email"]:focus,
+.theme-light input[type="password"]:focus,
+.theme-light input[type="number"]:focus,
+.theme-light input[type="url"]:focus,
+.theme-light input[type="tel"]:focus,
+.theme-light input[type="date"]:focus,
+.theme-light input[type="time"]:focus,
+.theme-light input[type="datetime-local"]:focus,
+.theme-light textarea:focus,
+.theme-light select:focus {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(37, 111, 130, 0.45),
+    0 0 10px rgba(51, 133, 157, 0.18);
 }
 
 input[type="checkbox"] {
