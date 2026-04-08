@@ -297,7 +297,7 @@ body {
   --input-hover-border-color: #33859d;
   --input-focus-border-color: #256f82;
 
-  --metadata-input-background: #f4fbfa;
+  --metadata-input-background: transparent;
   --metadata-input-background-hover: #e6f2f0;
   --metadata-input-background-active: rgba(37, 111, 130, 0.12);
 }
