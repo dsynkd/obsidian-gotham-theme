@@ -301,14 +301,6 @@ body {
   --metadata-input-background-active: rgba(37, 111, 130, 0.12);
 }
 
-/* Editor: active line — class-toggle id must match Style Settings (default: on) */
-body.theme-dark:not(.gotham-active-line-highlight)
-  .markdown-source-view.mod-cm6
-  .cm-editor
-  .cm-line.cm-active {
-  background-color: transparent;
-}
-
 body.theme-dark.gotham-active-line-highlight
   .markdown-source-view.mod-cm6
   .cm-editor
