@@ -54,7 +54,7 @@
 
 body {
   --link-decoration: none;
-  --link-decoration-hover: none;
+  --link-decoration-hover: underline;
   --link-external-decoration: none;
   --link-external-decoration-hover: none;
   --tag-decoration: none;
@@ -119,7 +119,6 @@ body {
 
   --link-color: var(--gotham-cyan);
   --link-color-hover: var(--gotham-green);
-  --link-decoration-hover: underline;
   --link-external-color: var(--gotham-purple);
 
   --h1-color: var(--gotham-orange);
