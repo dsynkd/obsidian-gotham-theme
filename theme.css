@@ -56,7 +56,7 @@ body {
   --link-decoration: none;
   --link-decoration-hover: underline;
   --link-external-decoration: none;
-  --link-external-decoration-hover: none;
+  --link-external-decoration-hover: underline;
   --tag-decoration: none;
   --tag-decoration-hover: underline;
   --tag-padding-x: 0.5em;
@@ -473,14 +473,6 @@ body.theme-dark .workspace .is-flashing {
   font-size: var(--font-smaller);
   color: var(--dataview-value);
   background-color: var(--dataview-value-background);
-}
-
-/* Prism / code blocks */
-.theme-dark .markdown-preview-view code[class*="language-"],
-.theme-dark .markdown-preview-view pre[class*="language-"],
-.theme-dark .markdown-source-view.mod-cm6 code[class*="language-"],
-.theme-dark .markdown-source-view.mod-cm6 pre[class*="language-"] {
-  line-height: var(--line-height-tight);
 }
 
 .theme-dark .markdown-preview-section pre {
